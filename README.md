@@ -1,1 +1,1 @@
-I use this repo for practicing new technologies.
+Todo app with react native and expo
