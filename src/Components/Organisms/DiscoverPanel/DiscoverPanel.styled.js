@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const StyledDiscoverPanel = styled.div`
   padding: 70px 0;
+  background-color: ${({ theme }) => theme.color.default_background};
   .title {
     margin-bottom: 50px;
   }

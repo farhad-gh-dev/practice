@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledItemCard = styled.div`
-  background-color: white;
+  background-color: ${({ theme }) => theme.color.app_background};
   border-radius: 20px;
   padding: 10px;
   padding-bottom: 24px;
@@ -12,7 +12,7 @@ export const CardImage = styled.a`
   width: 100%;
   height: 220px;
   border-radius: 20px;
-  background-color: white;
+  background-color: ${({ theme }) => theme.color.default_background};
   margin-bottom: 32px;
 
   ${(props) =>
