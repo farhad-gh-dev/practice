@@ -1,5 +1,12 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { color, typography } from "../../../Styles/styles";
+
+const disabledProps = css`
+  background-color: ${({ theme }) => theme.color.default_background};
+  color: ${color.text_disabled};
+  cursor: not-allowed;
+  pointer-event: none;
+`;
 
 export const StyledButton = styled.button`
   width: 135px;
@@ -7,10 +14,10 @@ export const StyledButton = styled.button`
   padding: 0 20px;
   font-size: ${typography.size.text_18};
   font-weight: ${typography.weight.medium};
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 1px solid ${({ theme }) => theme.color.inverse_background};
   border-radius: 10px;
-  background-color: #f7f7f7;
-  color: black;
+  background-color: ${({ theme }) => theme.color.default_background};
+  color: ${({ theme }) => `${theme.color.text}`};
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -26,14 +33,7 @@ export const StyledButton = styled.button`
     transform: scale(0.96);
   }
 
-  ${(props) =>
-    props.disabled &&
-    `
-    background-color: #E8E8E8;
-    color: ${color.text_disabled};
-    cursor: not-allowed;
-    pointer-event: none;
-    `};
+  ${(props) => props.disabled && disabledProps};
 `;
 
 export const StyledLink = StyledButton.withComponent("a");

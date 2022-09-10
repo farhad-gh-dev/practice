@@ -3,7 +3,8 @@ import { color, typography } from "../../../Styles/styles";
 
 export const StyledParagraph = styled.p`
   display: block;
-  color: ${color.darkest};
+  background-color: ${({ theme }) => theme.color.default_background};
+  color: ${({ theme }) => theme.color.text};
   font-size: ${typography.size.text_16};
 
   ${(props) =>

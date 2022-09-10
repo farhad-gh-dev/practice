@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { color } from "../../../Styles/styles";
 
 export const StyledH1 = styled.h1`
-  color: ${color.darkest};
+  background-color: ${({ theme }) => theme.color.default_background};
+  color: ${({ theme }) => theme.color.text};
   font-size: 60px;
 
   ${(props) =>
@@ -27,6 +28,14 @@ export const StyledH1 = styled.h1`
     props.textTransform &&
     `
     text-transform: ${props.textTransform};
+    `};
+
+  ${(props) =>
+    props.overflowEllipsis &&
+    `
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     `};
 `;
 

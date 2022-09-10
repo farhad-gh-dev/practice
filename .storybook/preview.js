@@ -1,5 +1,12 @@
+import { addDecorator } from "@storybook/react";
+import { withThemesProvider } from "storybook-addon-styled-component-theme";
+import { ThemeProvider } from "styled-components";
 import { MINIMAL_VIEWPORTS } from "@storybook/addon-viewport";
 import { GlobalStyle } from "../src/Styles/global";
+import { themes } from "../src/Styles/styles";
+
+const allThemes = [{ ...themes.light }, { ...themes.dark }];
+addDecorator(withThemesProvider(allThemes), ThemeProvider);
 
 const customViewports = {
   ...MINIMAL_VIEWPORTS,

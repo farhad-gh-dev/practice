@@ -48,3 +48,42 @@ export const breakpoint = {
   laptopScreen: 1280,
   largeScreen: 1920,
 };
+
+export const themes = {
+  light: {
+    name: "light",
+    color: {
+      default_background: "#FFFFFF",
+      app_background: "rgba(0, 0, 0, 0.05)",
+      inverse_background: "#000000",
+      primary: "#F33D3D", // Light Red
+
+      lightest: "#FFFFFF",
+      darkest: "#000000",
+
+      text: "#000000",
+
+      positive: "#F33D3D",
+      negative: "#0BDA51",
+      warning: "#FFA800",
+    },
+  },
+  dark: {
+    name: "dark",
+    color: {
+      default_background: "#000000",
+      app_background: "rgba(0, 0, 0, 0.90)",
+      inverse_background: "#FFFFFF",
+      primary: "#F33D3D", // Light Red
+
+      lightest: "#FFFFFF",
+      darkest: "#000000",
+
+      text: "#ffffff",
+
+      positive: "#F33D3D",
+      negative: "#0BDA51",
+      warning: "#FFA800",
+    },
+  },
+};
